@@ -1,0 +1,83 @@
+@import url(vars.css);
+
+.centrador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.red--banner {
+    background-color: var(--main-poli);
+    height: 11rem;
+    margin-top: -1.2em;
+    width: 100%;
+}
+
+.h2--cagada {
+    display: flex;
+    justify-content: left;
+    color: var(--white-poli);
+}
+
+.para--margen {
+    padding-top: 1em;
+    margin-left: 2.5em;
+}
+
+.nombre--maestro {
+    margin-bottom: 1em;
+}
+
+.description {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+}
+
+.description > p {
+    color: var(--grey-subtitle);
+    font-family: Nunito;
+font-size: 1.375rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+.description--title {
+    display: flex;
+    justify-content: left;
+    color: var(--black-poli);
+    font-family: Nunito;
+font-size: 1.75rem;
+font-style: normal;
+font-weight: 700;
+
+}
+
+.cucaracha {
+    border-radius: 3.5rem;
+    background: var(--main-poli, #7D1C32);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.5em 3.5rem;
+    cursor: pointer;
+    color: var(--white-poli);
+    font-family: var(--font-family);
+    font-size: 1.5em; /* Adjust as needed */
+    text-decoration: none;
+    border: none;
+    margin-top: 2em;
+}
+
+.button-secondary {
+    color: var(--main-poli);
+    font-size: var(--subtitle-font-size);
+    text-decoration: none;
+  }
+
+.button-secondary:hover {
+    text-decoration: underline;
+    opacity: 90%;
+}

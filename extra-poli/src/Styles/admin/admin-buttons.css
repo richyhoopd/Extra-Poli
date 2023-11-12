@@ -1,0 +1,66 @@
+@import url('../vars.css');
+
+.button--green {
+    border-radius: 3.5rem;
+    background: #1FBA2F;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 2.3rem;
+    padding: 0.5em 3.5rem;
+    cursor: pointer;
+    color: var(--white-poli);
+    font-family: var(--font-family);
+    font-size: 1.7em; /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+}
+
+.button--yellow {
+    border-radius: 3.5rem;
+    background: #FFB21C;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0.5em 3.5rem;
+    cursor: pointer;
+    color: var(--white-poli);
+    font-family: var(--font-family);
+    font-size: 1.7em; /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    margin-top: 1em;
+}
+
+.button--red {
+    border-radius: 3.5rem;
+    background: var(--main-poli);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 2.3rem;
+    padding: 0.5em 3.5rem;
+    cursor: pointer;
+    color: var(--white-poli);
+    font-family: var(--font-family);
+    font-size: 1.7em; /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+}
+
+
+  .button--green,.button--red,.button--yellow:hover {
+    cursor: pointer;
+    opacity: 90%;
+  }

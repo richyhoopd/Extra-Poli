@@ -1,0 +1,14 @@
+@import url('../vars.css');
+
+.searchbar {
+    border-radius: 0.625rem;
+background: #E6E6E6;
+border: none;
+width: 80%;
+height: 3rem;
+padding-left: 1.2em;
+font-family: Nunito;
+font-size: 1rem;
+margin-bottom: 2em;
+
+}

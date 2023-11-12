@@ -1,0 +1,48 @@
+@import url("../vars.css");
+
+.curso--inscrito {
+  background-color: var(--main-poli);
+  width: 80%;
+  height: 11.0625rem;
+  border-radius: 0.625rem;
+  margin-bottom: 0.5em;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+.curso--inscrito:hover {
+    border: 1.8px solid var(--blue-poli);
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.titulo--card {
+  color: var(--white-poli);
+  /* ButtonText */
+  font-family: Nunito;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+p,
+span {
+  color: #fff;
+  font-family: Nunito;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.txt {
+    margin-left: 1.5rem;
+    margin-top: 5rem;
+}
+
+.no--hay--cursos {
+  color: grey;
+  font-size: 1.5em;
+}

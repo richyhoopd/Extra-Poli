@@ -1,0 +1,20 @@
+@import url(vars.css);
+
+.home--page--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-secondary {
+    color: var(--main-poli);
+    font-size: var(--subtitle-font-size);
+    margin-top: 2em;
+    text-decoration: none;
+  }
+
+.button-secondary:hover {
+    text-decoration: underline;
+    opacity: 90%;
+}
