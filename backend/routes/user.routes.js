@@ -13,6 +13,9 @@ router.route("/")
   .post(registrarUsuario)
   .get(obtenerTodos);
 
+router.route('/inscribir/:id')
+  .post(inscribirseEnCurso)
+
 router.route('/:id')
   .get(obtenerUno)
 

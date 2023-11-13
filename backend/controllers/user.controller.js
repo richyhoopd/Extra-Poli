@@ -66,7 +66,6 @@ ctrl.iniciarSesion = async (req, res) => {
 ctrl.obtenerTodosCursos = async (req, res) => {
   res.json(await Clase.find());
 };
-
   
  
 ctrl.inscribirseEnCurso = async (req, res) => {
@@ -75,13 +74,19 @@ ctrl.inscribirseEnCurso = async (req, res) => {
     const claseId = req.body.claseId;  // Utilizar req.body.claseId para el ID de la clase
 
     const clase = await Clase.findById(claseId);
+
+    console.log(clase);
+
     if (!clase) {
+      console.log('Poop');
       return res.status(404).json({ mensaje: 'Clase no encontrada' });
     }
 
     const usuario = await Usuario.findById(usuarioId);
+    console.log(usuarioId);
 
     if (usuario.cursosInscritos.includes(claseId)) {
+      console.log('Jajaja');
       return res.status(400).json({ mensaje: 'Ya estás inscrito en este curso' });
     }
 
@@ -90,7 +95,8 @@ ctrl.inscribirseEnCurso = async (req, res) => {
 
     res.json({ mensaje: 'Inscripción exitosa', curso: clase });
   } catch (error) {
-    res.status(500).json({ mensaje: 'Error al inscribirse al curso', error: error.message });
+    console.log('AQUI we');
+    res.status(500).json({ mensaje: 'Wachi wachi wa', error: error.message });
   }
 };
 

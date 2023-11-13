@@ -12,8 +12,10 @@ export default function Agregar() {
   const inscribirseAlCurso = async () => {
     try {
       // Cambié la forma en que se envían los datos a la API
-      await axios.put(`http://localhost:4001/api/clase/${id}`);
-
+      await axios.post(`http://localhost:4001/api/usuario/inscribir/${usuario._id}`, {
+        claseId: id
+      });
+      
       navigate("/success");
     } catch (error) {
       console.error('Error al inscribirse al curso', error.message);
