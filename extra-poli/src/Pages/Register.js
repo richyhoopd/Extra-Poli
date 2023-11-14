@@ -25,7 +25,7 @@ export default function Register() {
         })
     
         if(data._id !== undefined){
-          window.location.href = '/home';
+          window.location.href = '/login';
         }else{
           Swal.fire({
             icon: 'error',
