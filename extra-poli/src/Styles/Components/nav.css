@@ -11,7 +11,7 @@
     height: 4em;
     background-color: var(--main-poli);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     
@@ -33,3 +33,39 @@ letter-spacing: -0.095rem;
     cursor: pointer;
     text-decoration: underline;
 }
+
+.menu-hamburguesa {
+    cursor: pointer;
+    font-size: 24px;
+    margin-right: 20px; /* Mueve el icono de hamburguesa al lado izquierdo */
+    color: var(--white-poli);
+  }
+  
+  .menu-hamburguesa:hover {
+    color: #ccc;
+  }
+  
+  .menu-desplegable {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0; /* Ajusta la posición del menú desplegable */
+    background-color: #333;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .menu-desplegable.visible {
+    display: flex;
+  }
+  
+  .menu-desplegable a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+  }
+  
+  .menu-desplegable a:hover {
+    color: #ccc;
+  }

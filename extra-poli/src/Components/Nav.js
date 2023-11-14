@@ -1,18 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../Styles/Components/nav.css';
 
 export default function Nav() {
+  const [menuAbierto, setMenuAbierto] = useState(false);
+
   // Obtener el estado de la sesión desde el localStorage
   const isLoggedIn = !!localStorage.getItem('usuario');
 
-  // Determinar el destino del enlace
-  const destino = isLoggedIn ? '/home' : '/';
+  const toggleMenu = () => {
+    setMenuAbierto(!menuAbierto);
+  };
+
+  const menuHamburguesa = (
+    <div className={`menu-hamburguesa ${menuAbierto ? 'abierto' : ''}`} onClick={toggleMenu}>
+      <i className="fas fa-bars"></i>
+    </div>
+  );
 
   return (
     <div className='nav'>
+      {isLoggedIn && menuHamburguesa}
+
+      <div className={`menu-desplegable ${menuAbierto && isLoggedIn ? 'visible' : ''}`}>
+        {isLoggedIn && (
+          <>
+            <Link to='/home' onClick={toggleMenu}>
+              Home
+            </Link>
+            <Link to='/extras' onClick={toggleMenu}>
+              Cursos
+            </Link>
+            <Link to='/perfil/:id_usuario' onClick={toggleMenu}>
+              Perfil
+            </Link>
+            <Link to='/logout' onClick={toggleMenu}>
+              Logout
+            </Link>
+          </>
+        )}
+      </div>
+
       <p className='text-logo'>
-        <Link to={destino}>Extra Poli</Link>
+        <Link to={isLoggedIn ? '/home' : '/'}>Extra Poli</Link>
       </p>
     </div>
   );
