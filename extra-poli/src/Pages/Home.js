@@ -40,6 +40,11 @@ export default function Home() {
           Cerrar Sesion
         </Link>
       </center>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+
     </div>
   );
 }

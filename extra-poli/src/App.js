@@ -16,6 +16,7 @@ import CursoSuccess from './Pages/CursoSuccess';
 import Logout from './Pages/Logout';
 import EditForm from './Pages/admin/EditForm';
 import ActualizadoSuccess from './Pages/ActualizadoSuccess';
+import UserProfile from './Pages/UserProfile';
 
 
 
@@ -37,10 +38,7 @@ function App() {
       < Route path='/actualizado/success' element={<ActualizadoSuccess/>} />
       < Route path='/logout' element={<Logout/>} />
       < Route path='/editar/:id' element={<EditForm/>} />
-
-
-
-
+      < Route path='/perfil' element={<UserProfile/>} />
 
 
       </Routes>

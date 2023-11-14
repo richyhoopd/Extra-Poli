@@ -31,7 +31,7 @@ export default function Nav() {
             <Link to='/extras' onClick={toggleMenu}>
               Cursos
             </Link>
-            <Link to='/perfil/:id_usuario' onClick={toggleMenu}>
+            <Link to='/perfil' onClick={toggleMenu}>
               Perfil
             </Link>
             <Link to='/logout' onClick={toggleMenu}>
