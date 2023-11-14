@@ -6,20 +6,18 @@ import img99 from '../Assets/soccer.png'
 
 export default function CursoInscrito() {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
-
+  
   return (
     <div>
-      {usuario.length > 0 ? (
-        usuario.map((curso) => (
-         <Link key={curso._id} to={`/detalle/${curso._id}`} className="curso--inscrito">
+      {usuario ? (
+          <Link key={usuario._id} to={`/detalle/${usuario._id}`} className="curso--inscrito">
             <div className="txt">
-              <p className="titulo--card">{curso.nombre}</p>
-              <p>{curso.desc}</p>
-              <span>Aula: {curso.aula} - {curso.dia} {curso.horario}</span>
+              <p className="titulo--card">{usuario.nombre}</p>
+              <p>{usuario.desc}</p>
+              <span>Aula: {usuario.aula} - {usuario.dia} {usuario.horario}</span>
             </div>
           </Link>
-        ))
-      ) : (
+        ) : (
         <center>
           <br/>
           <br/>

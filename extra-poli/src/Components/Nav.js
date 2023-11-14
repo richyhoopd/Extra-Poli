@@ -26,7 +26,7 @@ export default function Nav() {
         {isLoggedIn && (
           <>
             <Link to='/home' onClick={toggleMenu}>
-              Home
+              Inicio
             </Link>
             <Link to='/extras' onClick={toggleMenu}>
               Cursos
@@ -35,7 +35,7 @@ export default function Nav() {
               Perfil
             </Link>
             <Link to='/logout' onClick={toggleMenu}>
-              Logout
+              Cerrar Sesión
             </Link>
           </>
         )}
