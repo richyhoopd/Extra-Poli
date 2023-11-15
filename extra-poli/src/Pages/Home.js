@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Nav from "../Components/Nav";
 import CursoInscrito from "../Components/CursoInscrito";
 import "../Styles/home.css";

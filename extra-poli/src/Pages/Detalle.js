@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "../Components/Nav";
 import "../Styles/detalle.css";
-import { Link, useParams, useNavigate } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import AdminManagementButtons from "../Components/AdminManagementButtons";
 import axios from "axios";
 import Agregar from "../Components/Agregar";
@@ -11,7 +11,7 @@ export default function Detalle() {
 
   const { id } = useParams();
   const [clase, setClase] = useState({});
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const getClase = async () => {

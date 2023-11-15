@@ -6,7 +6,8 @@ const {
   iniciarSesion,
   obtenerTodos,
   obtenerUno,
-  inscribirseEnCurso
+  inscribirseEnCurso,
+  obtenerCursos
 } = require("../controllers/user.controller");
 
 router.route("/")
@@ -15,6 +16,9 @@ router.route("/")
 
 router.route('/inscribir/:id')
   .post(inscribirseEnCurso)
+
+router.route('/cursos/:id')
+  .get(obtenerCursos)
 
 router.route('/:id')
   .get(obtenerUno)

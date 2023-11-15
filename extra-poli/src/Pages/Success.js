@@ -1,10 +1,9 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import img1 from "../Assets/success.png";
 import "../Styles/vars.css";
 
 export default function Success() {
-  const {id} = useParams();
   return (
     <div>
       <center>

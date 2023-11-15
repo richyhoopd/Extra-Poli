@@ -1,11 +1,11 @@
 import React from 'react';
 import user from '../Assets/user.png';
 import Nav from '../Components/Nav';
-import { Navigate, Link, useParams } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import '../Styles/user-profile.css';
 import Swal from 'sweetalert2';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+// import { useEffect, useState } from 'react';
+// import axios from 'axios';
 
 export default function UserProfile() {
      const usuario = JSON.parse(localStorage.getItem("usuario"));

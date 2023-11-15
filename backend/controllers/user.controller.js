@@ -100,4 +100,19 @@ ctrl.inscribirseEnCurso = async (req, res) => {
   }
 };
 
+ctrl.obtenerCursos = async(req, res) => {
+  try{
+    
+    const {id} = req.params;
+    const usuario = await Usuario.findById(id);
+
+    const cursos = await Promise.all( usuario.cursosInscritos.map( async (c) => { return await Clase.findById(c) } ));
+    
+    res.json(cursos);
+
+  }catch (err) {
+    res.status(500).json({ mensaje: 'Error', error: err})
+  }
+}
+
 module.exports = ctrl;
