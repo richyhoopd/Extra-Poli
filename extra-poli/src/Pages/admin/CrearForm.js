@@ -96,7 +96,7 @@ export default function CrearForm() {
           id="plan"
           className="input--crear--curso"
           type="textarea"
-          placeholder="plan de estudios..."
+          placeholder="plan de clase..."
           required
         />
         <textarea

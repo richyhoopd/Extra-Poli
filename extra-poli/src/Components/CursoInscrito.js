@@ -6,11 +6,13 @@ import img99 from '../Assets/soccer.png'
 
 export default function CursoInscrito() {
   const usuario = JSON.parse(localStorage.getItem("usuario"));
+
+  console.log(usuario.cursosInscritos.lenght)
   
   return (
     <div>
-      {usuario ? (
-          <Link key={usuario._id} to={`/detalle/${usuario._id}`} className="curso--inscrito">
+      {usuario.cursosInscritos.lenght > 1 ? (
+          <Link key={usuario._id} to={`/detalle/${usuario.cursosInscritos._id}`} className="curso--inscrito">
             <div className="txt">
               <p className="titulo--card">{usuario.nombre}</p>
               <p>{usuario.desc}</p>

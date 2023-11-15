@@ -47,7 +47,7 @@ export default function Detalle() {
         <p>{clase.desc}</p>
       </div>
       <div className="description">
-        <h2 className="description--title">Plan de estudios</h2>
+        <h2 className="description--title">Plan de clase</h2>
         <p>{clase.plan}</p>
       </div>
       <div className="description">

@@ -4,7 +4,7 @@ import img1 from "../Assets/success.png";
 import "../Styles/vars.css";
 
 export default function Success() {
-  const{id} = useParams();
+  const {id} = useParams();
   return (
     <div>
       <center>
@@ -40,16 +40,12 @@ export default function Success() {
       <br />
       <br />
       <center>
-        <Link to={`/detalle/${id}`} className="button-primary">Ver detalles de la clase</Link>
+        <Link to={`/home`} className="button-primary">Volver al inicio</Link>
       </center>
       <br />
       <br />
       <br />
       <br />
-
-      <center>
-        <Link to={'/home'} className="button-secondary">Volver al inicio</Link>
-      </center>
     </div>
   );
 }
