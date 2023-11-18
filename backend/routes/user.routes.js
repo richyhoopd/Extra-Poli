@@ -7,7 +7,8 @@ const {
   obtenerTodos,
   obtenerUno,
   inscribirseEnCurso,
-  obtenerCursos
+  obtenerCursos,
+  alumnosInscritos
 } = require("../controllers/user.controller");
 
 router.route("/")
@@ -25,5 +26,8 @@ router.route('/:id')
 
 router.route("/iniciar/sesion")
   .post(iniciarSesion);
+
+router.route("/alumnos/inscritos/:id")
+  .get(alumnosInscritos);
 
 module.exports = router;

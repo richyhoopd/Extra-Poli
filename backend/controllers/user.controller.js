@@ -90,10 +90,16 @@ ctrl.inscribirseEnCurso = async (req, res) => {
       return res.status(400).json({ mensaje: 'Ya estás inscrito en este curso' });
     }
 
-    usuario.cursosInscritos.push(claseId);
-    await usuario.save();
+    if (usuario.cursosInscritos.length < 2) {
+      usuario.cursosInscritos.push(claseId);
+      await usuario.save();
 
     res.json({ mensaje: 'Inscripción exitosa', curso: clase });
+    } else {
+      console.log('ya no puedes inscribir mas cursos');
+      return res.status(401).json({ mensaje: 'no puedes inscribir mas de dos cursos'})
+    }
+    
   } catch (error) {
     console.log('AQUI we');
     res.status(500).json({ mensaje: 'Wachi wachi wa', error: error.message });
@@ -114,5 +120,25 @@ ctrl.obtenerCursos = async(req, res) => {
     res.status(500).json({ mensaje: 'Error', error: err})
   }
 }
+
+ctrl.alumnosInscritos = async (req, res) => {
+  try {
+    const claseId = req.params.id; // Obtener la claseId de los parámetros de la URL
+
+    const usuarios = await Usuario.find({ cursosInscritos: claseId }); // Buscar usuarios con la claseId inscrita
+
+    var alumnosEnClase = [];
+    
+    usuarios.map((u) => {
+      alumnosEnClase.push(u.id)
+    })// Obtener solo las IDs de los usuarios encontrados
+
+    res.json(alumnosEnClase); // Enviar la lista de IDs de alumnos inscritos como respuesta
+  } catch (error) {
+    console.log('Hubo un error');
+    res.status(500).json({ mensaje: 'Error mostrando alumnos', error });
+  }
+};
+
 
 module.exports = ctrl;

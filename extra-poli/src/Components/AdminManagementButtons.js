@@ -50,7 +50,10 @@ export default function AdminManagementButtons() {
 
   return (
     <div>
-      {/* <Link className="button--green">Ver alumnos inscritos</Link> */}
+      <center>
+
+       <Link to={`/detalle/alumnos/${id}`} className="button--green">Ver alumnos inscritos</Link>
+      </center>
       <center>
       <button className="button--yellow" onClick={editar}>Editar información</button>
         </center>

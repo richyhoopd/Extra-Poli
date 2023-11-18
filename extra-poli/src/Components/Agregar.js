@@ -27,6 +27,13 @@ export default function Agregar() {
       } else {
         console.error('Error al inscribirse al curso', error.message);
       }
+      if(error.response.status === 401) {
+        Swal.fire({
+          icon: 'error',
+          title: 'Maximo de cursos inscritos alcanzado',
+          text: 'No puedes inscribirte a mas de dos cursos extracurriculares.',
+        });
+      }
     }
  };
 
